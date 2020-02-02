@@ -13,3 +13,12 @@ class Pair<T1, T2> {
     this.m1 = m1;
   }
 }
+
+type GenericPoint = Pair<number, number>;
+
+export function distanceGeneric(
+  point1: GenericPoint,
+  point2: GenericPoint
+): number {
+  return Math.sqrt((point1.m0 - point2.m0) ** 2 + (point1.m1 - point2.m1) ** 2);
+}
